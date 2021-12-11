@@ -8,10 +8,12 @@ namespace CoolBank
         static void Main(string[] args)
         {
             var account = new BankAccount("Shivam", 1000);
+            
             Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} intial balance.");
 
 
             PaymentsByFriend();
+            TransactionHistory();
             //PaymentByFriend(account);
 
 
