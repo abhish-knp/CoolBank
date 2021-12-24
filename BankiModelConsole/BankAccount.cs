@@ -1,60 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CoolBank
 {
-    internal class MainClass
-    {
-
-        static void Main(string[] args)
-        {
-            var account = new BankAccount("Shivam", 1000);
-            Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} intial balance.");
-
-            {
-                account.MakeWithdrawal(500, DateTime.Now, "Rent payment");
-                Console.WriteLine(account.Balance);
-                account.MakeDeposit(100, DateTime.Now, "Friend paid me back");
-                Console.WriteLine(account.Balance);
-            }
-
-            // Trying to open bank account with -ve balance
-            {
-                BankAccount invalidAccount;
-                try
-                {
-                    invalidAccount = new BankAccount("invalid", -55);
-                }
-                catch (ArgumentOutOfRangeException e)
-                {
-                    Console.WriteLine("Exception caught creating account with negative balance");
-                    Console.WriteLine(e.ToString());
-                    return;
-                }
-            }
-
-
-            {
-                try
-                {
-                    account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");
-                }
-                catch (InvalidOperationException e)
-                {
-                    Console.WriteLine("Exception caught trying to overdraw");
-                    Console.WriteLine(e.ToString());
-                }
-            }
-
-            // Transaction History
-            {
-                Console.WriteLine(account.GetAccountHistory());
-            }
-
-            Console.ReadLine();
-        }
-    }
-
     public class BankAccount
     {
         private static int accountNumberSeed = 1234567000;
@@ -90,7 +41,7 @@ namespace CoolBank
             MakeDeposit(intialBalance, DateTime.Now, "Intial balance ");
         }
 
-        
+
 
         public void MakeDeposit(decimal amount, DateTime date, string note)
         {
@@ -145,18 +96,4 @@ namespace CoolBank
 
     }
 
-    public class Transaction
-    {
-        public decimal Amount { get; }
-        public DateTime Date { get; }
-        public String Notes { get; }
-
-        public Transaction(decimal amount, DateTime date, string notes)
-        {
-            this.Amount = amount;
-            this.Notes = notes;
-            this.Date = date;
-
-        }
-    }
 }

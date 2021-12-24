@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoolBank", "CoolBank.csproj", "{42CEF755-44CF-4E73-BCF8-E2606D9AD858}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MomentoModel", "MomentoModel\MomentoModel.csproj", "{8121084B-CADD-4B83-8F99-E4F0AC5E28EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{42CEF755-44CF-4E73-BCF8-E2606D9AD858}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42CEF755-44CF-4E73-BCF8-E2606D9AD858}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42CEF755-44CF-4E73-BCF8-E2606D9AD858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8121084B-CADD-4B83-8F99-E4F0AC5E28EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8121084B-CADD-4B83-8F99-E4F0AC5E28EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8121084B-CADD-4B83-8F99-E4F0AC5E28EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8121084B-CADD-4B83-8F99-E4F0AC5E28EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
